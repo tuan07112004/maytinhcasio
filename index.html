@@ -1,0 +1,16 @@
+<link rel="stylesheet" href="calculator_basic.css">
+
+<div id="main" style="width: 100%; height: 700px;"></div>
+
+<script>
+    window.platform = 'www';
+    if (typeof Desmos === 'undefined') Desmos = {};
+    Desmos.config = { sciKeypad: true, degreeMode: true };
+</script>
+
+<script src="calculator_basic.js"></script>
+
+<script>
+    const elt = document.getElementById('main');
+    Desmos.ScientificCalculator(elt, { language: "vi" });
+</script>
